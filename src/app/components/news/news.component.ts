@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-
+  title = '我是新闻页'
   constructor() { }
 
   ngOnInit() {
