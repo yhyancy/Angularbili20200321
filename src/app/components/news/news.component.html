@@ -1,1 +1,31 @@
 <h2>{{ title }}</h2>
+<!-- 数据绑定 -->
+<h1>{{ userinfo.username}}</h1>
+{{ message }}
+<!-- 属性绑定 动态数据 -->
+<div [title]='attr'>属性绑定</div>
+<!-- 绑定html -->
+<div>{{ hml }}</div>
+<span [innerHtml]='hml' class="red"> </span>
+<!-- //数据运算 -->
+{{ 1 + 1 }}
+<!-- 循环数组 -->
+<ul>
+    <li *ngFor='let item of arr'>
+        {{ item }}
+    </li>
+</ul>
+
+<!-- ------------------------------------>
+
+<ul>
+    <li *ngFor='let item of userlist'>
+        <h2> {{ item.id }}</h2>
+        <ol>
+            <li *ngFor='let i of item.list'>
+                {{i.name}} - {{ i.age }}
+            </li>
+        </ol>
+    </li>
+</ul>
+<hr />
