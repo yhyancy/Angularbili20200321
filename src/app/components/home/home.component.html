@@ -67,4 +67,12 @@
 <input type="text" (keyup)="keyUp($event)">
 <br>
 <button (click)="runEvent($event)">执行方法获取事件对象</button>
+<h3>数据双向绑定</h3>
+<input type="text" [(ngModel)]='keywords' />
+{{ keywords }}
+<br>
+<input type="text" [(ngModel)]='key' />
+{{ key }}
+
+<button (click)="changeKey()">改变key</button>
 <hr />

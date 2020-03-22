@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   public sty: string = 'red'
   public today: any = new Date()
   public title: any = '我是title'
+  public keywords: string
+  public key: string = '我是默认的key值'
   constructor() { }
 
   ngOnInit() {
@@ -38,6 +40,8 @@ export class HomeComponent implements OnInit {
   runEvent(e) {
     var dom: any = e.target
     dom.style.color = 'red'
-
+  }
+  changeKey() {
+    this.key = '我是改变后的值'
   }
 }
