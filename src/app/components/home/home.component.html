@@ -1,1 +1,70 @@
 <h2>我是home组件</h2>
+<img src="assets/img/logo.png" alt="logo图片">
+<!-- 不需要写../ -->
+<img src="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E4%BB%8A%E6%97%A5%E6%96%B0%E9%B2%9C%E4%BA%8B&step_word=&hs=0&pn=0&spn=0&di=87120&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=1152688573%2C3773041605&os=780648962%2C3839419344&simid=3363489887%2C234468754&adpicid=0&lpn=0&ln=1510&fr=&fmq=1584855611150_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2F04imgmini.eastday.com%2Fmobile%2F20180919%2F20180919155835_8c75bd28329860ba381e732eabad4009_2.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooj_z%26e3Bfi7uw1wfit_z%26e3Bv54AzdH3Fetjok-8989nbl00cnd9d-8989nbl00cnd9ddmbc_z%26e3Bip4s&gsm=1&rpstart=0&rpnum=0&islist=&querylist=&force=undefined"
+    alt="奋斗">
+<h3>数组循环，显示索引key</h3>
+<ul>
+    <li *ngFor="let item of list; let key=index">
+        {{ key }} - {{ item.title }}
+    </li>
+</ul>
+<h3>条件判断 *ngIf</h3>
+<div *ngIf="flag">
+    <img src="assets/img/success.png" alt="success" />
+</div>
+<div *ngIf="!flag">
+    <img src="assets/img/jian.jpg" alt="jian" />
+</div>
+
+<ul>
+    <li *ngFor="let item of list; let key=index">
+        <span *ngIf="key==1" class="red">{{ key }} - {{ item.title }}</span>
+        <span *ngIf="key!=1">{{ key }} - {{ item.title }}</span>
+    </li>
+</ul>
+<h3>条件判断 *ngSwitch</h3>
+<span [ngSwitch]="orderStatus">
+    <p *ngSwitchCase="1">
+        没有提交订单
+    </p>
+    <p *ngSwitchCase="2">
+        提交订单
+    </p>
+    <p *ngSwitchCase='3'>
+        已发货
+    </p>
+    <p *ngSwitchDefault>
+        已收货
+    </p>
+</span>
+<h3>条件判断 *ngClass</h3>
+<div [ngClass]="{'red':true, 'blue':false }">ngclass演示</div>
+<div [ngClass]="{'red':flag ,'blue':!flag}">ngclass演示2</div>
+<h3>循环数组，让数组的第一个元素变成red,第二个 为blue</h3>
+<ul>
+    <li *ngFor="let item of list; let key=index" [ngClass]="{'red': key==1, 'blue': key == 2}">
+        {{ key }} - {{ item.title }}
+    </li>
+</ul>
+<h3>*ngStyle</h3>
+<p style="color: pink;">我是原始p标签改样式</p>
+<p [ngStyle]="{'color':'blue'}">我是ngStyle改p标签样式</p>
+<p [ngStyle]="{'color': sty }">我是通过获取变量值ngStyle 改p标签样式</p>
+
+<h3>管道</h3>
+<p>{{ today | date:'yyyy-MM-dd HH:mm ss' }}</p>
+<h3>事件</h3>
+<button (click)="run()">执行方法</button>
+<button (click)="getData()">执行方法获取数据</button>
+{{ title }}
+<button (click)="setData()">执行方法获取数据并改变数据</button>
+<h3>表单事件keydown</h3>
+<input type="text" (keydown)="keyDown()">
+<input type="text" (keydown)="keyDown($event)">
+<br>
+<h3>表单事件keyUp</h3>
+<input type="text" (keyup)="keyUp($event)">
+<br>
+<button (click)="runEvent($event)">执行方法获取事件对象</button>
+<hr />
