@@ -1,0 +1,26 @@
+<h2>人员登记系统</h2>
+<div class="people_list">
+    <ul>
+        <li>姓名: <input type="text" id="username" [(ngModel)]='peopleinfo.username' class="username"></li>
+        <li>性别:
+            <input type="radio" value="1" name="sex" id="sex1" [(ngModel)]='peopleinfo.sex'><label for="sex1">男</label>
+            <input type="radio" value="2" name="sex" id="sex2" [(ngModel)]='peopleinfo.sex'><label for="sex2">女</label>
+        </li>
+        <li>城市:
+            <select [(ngModel)]="peopleinfo.city">
+                <option *ngFor="let item of peopleinfo.cityList" [value]="item">{{item}}</option>
+            </select>
+        </li>
+        <li>爱好:
+            <span *ngFor="let item of peopleinfo.hobby; let key=index;">
+                <input type="checkbox" [id]="'check'+key" [(ngModel)]='item.checked' />
+                <label [for]="'check'+ key">{{ item.title}}</label> &nbsp; &nbsp;
+            </span>
+        </li>
+        <li>备注:
+            <textarea name="note" id="note" [(ngModel)]='peopleinfo.note'></textarea>
+        </li>
+    </ul>
+    <button class="submit" (click)="doSubmit()">获取表单元素</button>
+    <pre> {{ peopleinfo | json }}  </pre>
+</div>
