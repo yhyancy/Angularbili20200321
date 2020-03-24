@@ -7,6 +7,7 @@ import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './form/form.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormComponent } from './form/form.component';
     NewsComponent,
     HomeComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
