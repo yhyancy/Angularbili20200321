@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service'
 
 @Component({
   selector: 'app-todolist',
@@ -38,7 +39,10 @@ export class TodolistComponent implements OnInit {
     return false
   }
 
-  constructor() { }
+  constructor( public storage:StorageService) {
+    // let s= this.storage.get()
+    // console.log('todolist',s)
+  }
 
   ngOnInit() {
   }

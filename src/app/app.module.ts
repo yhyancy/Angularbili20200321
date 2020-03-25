@@ -11,6 +11,9 @@ import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './todolist/todolist.component';
 
 
+//引用并配置服务
+import { StorageService } from './services/storage.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,7 @@ import { TodolistComponent } from './todolist/todolist.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
