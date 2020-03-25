@@ -56,4 +56,9 @@ export class TodolistComponent implements OnInit {
     }
   }
 
+  checkboxChange(){
+    console.log('事件触发了')
+    this.storage.set('todolist', this.todolist)
+  }
+
 }
