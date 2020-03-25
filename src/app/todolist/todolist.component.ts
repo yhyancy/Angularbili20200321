@@ -16,6 +16,7 @@ export class TodolistComponent implements OnInit {
     if (e.keyCode == 13) {
       if (!this.todolistHasKw(this.todolist, this.keyword)) {
         this.todolist.push({ title: this.keyword, status: 0 }) //0代办 1已完成
+        this.storage.set('todolist', this.todolist)
       }
       else {
         alert('含有相同值')
@@ -27,6 +28,7 @@ export class TodolistComponent implements OnInit {
   }
   deleteHistory(key) {
     this.todolist.splice(key, 1)
+    this.storage.set('todolist', this.todolist)
   }
 
   todolistHasKw(todolist, keyword) {
@@ -45,6 +47,13 @@ export class TodolistComponent implements OnInit {
   }
 
   ngOnInit() {
+    //页面刷新会触发这个生命周期函数
+    console.log('刷新')
+    var todolist: any = this.storage.get('todolist')
+
+    if (todolist){
+      this.todolist = todolist
+    }
   }
 
 }

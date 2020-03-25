@@ -26,6 +26,7 @@ export class SearchComponent implements OnInit {
   deleteHistory(key) {
     alert(key)
     this.historyList.splice(key, 1)
+    this.storage.set('searchlist', this.historyList)
   }
   constructor(public storage:StorageService) {
       // let s= this.storage.get();
