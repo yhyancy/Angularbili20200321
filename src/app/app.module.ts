@@ -13,7 +13,8 @@ import { TodolistComponent } from './todolist/todolist.component';
 
 //引用并配置服务
 import { StorageService } from './services/storage.service';
-import { DomleftbarComponent } from './components/domleftbar/domleftbar.component'
+import { DomleftbarComponent } from './components/domleftbar/domleftbar.component';
+import { ViewchildComponent } from './components/viewchild/viewchild.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DomleftbarComponent } from './components/domleftbar/domleftbar.componen
     FormComponent,
     SearchComponent,
     TodolistComponent,
-    DomleftbarComponent
+    DomleftbarComponent,
+    ViewchildComponent
   ],
   imports: [
     BrowserModule,
