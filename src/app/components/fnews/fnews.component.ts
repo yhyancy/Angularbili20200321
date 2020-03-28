@@ -18,4 +18,10 @@ export class FnewsComponent implements OnInit {
   getChildRun(){
     alert(this.footer.run())
   }
+
+  // outer
+  run(e){
+   alert('我是父组件run方法')
+   console.log(e)
+  }
 }

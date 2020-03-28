@@ -6,4 +6,4 @@
 <button (click)="getChildRun()">执行子组件的run方法</button>
 <br>
 <hr>
-<app-cfooter #footer></app-cfooter>
+<app-cfooter #footer (outer)="run($event)"></app-cfooter>
