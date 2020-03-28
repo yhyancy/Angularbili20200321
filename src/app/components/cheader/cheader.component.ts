@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cheader',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheaderComponent implements OnInit {
 
+  @Input() title1:any
   constructor() { }
 
   ngOnInit() {
