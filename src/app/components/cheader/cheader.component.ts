@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CheaderComponent implements OnInit {
 
   @Input() title1:any
+  @Input() msg:any
   constructor() { }
 
   ngOnInit() {
