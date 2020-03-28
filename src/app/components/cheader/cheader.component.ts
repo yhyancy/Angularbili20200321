@@ -10,6 +10,8 @@ export class CheaderComponent implements OnInit {
   @Input() title1:any
   @Input() msg:any
   @Input() run:any
+  @Input() home:any
+
   constructor() { }
 
   ngOnInit() {
@@ -19,4 +21,7 @@ export class CheaderComponent implements OnInit {
     this.run()
   }
 
+  getParentHome(){
+    alert(this.home.msg)
+  }
 }
