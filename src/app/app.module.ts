@@ -17,7 +17,9 @@ import { DomleftbarComponent } from './components/domleftbar/domleftbar.componen
 import { ViewchildComponent } from './components/viewchild/viewchild.component';
 import { TransitionComponent } from './components/transition/transition.component';
 import { FhomeComponent } from './components/fhome/fhome.component';
-import { CheaderComponent } from './components/cheader/cheader.component'
+import { CheaderComponent } from './components/cheader/cheader.component';
+import { CfooterComponent } from './components/cfooter/cfooter.component';
+import { FnewsComponent } from './components/fnews/fnews.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CheaderComponent } from './components/cheader/cheader.component'
     ViewchildComponent,
     TransitionComponent,
     FhomeComponent,
-    CheaderComponent
+    CheaderComponent,
+    CfooterComponent,
+    FnewsComponent
   ],
   imports: [
     BrowserModule,
