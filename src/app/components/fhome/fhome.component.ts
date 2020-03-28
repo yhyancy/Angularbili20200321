@@ -15,4 +15,8 @@ export class FhomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  run(){
+    alert('我是父组件的run方法')
+  }
+
 }

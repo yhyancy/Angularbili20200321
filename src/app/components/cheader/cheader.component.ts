@@ -9,9 +9,14 @@ export class CheaderComponent implements OnInit {
 
   @Input() title1:any
   @Input() msg:any
+  @Input() run:any
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getParentRun(){
+    this.run()
   }
 
 }
