@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-fnews',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fnews.component.scss']
 })
 export class FnewsComponent implements OnInit {
+  @ViewChild('footer',{static:true}) footer:any
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  getChildMsg(){
+    alert(this.footer.msg)
+  }
+  getChildRun(){
+    alert(this.footer.run())
+  }
 }
