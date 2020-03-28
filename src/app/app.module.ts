@@ -15,7 +15,9 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { StorageService } from './services/storage.service';
 import { DomleftbarComponent } from './components/domleftbar/domleftbar.component';
 import { ViewchildComponent } from './components/viewchild/viewchild.component';
-import { TransitionComponent } from './components/transition/transition.component'
+import { TransitionComponent } from './components/transition/transition.component';
+import { FhomeComponent } from './components/fhome/fhome.component';
+import { CheaderComponent } from './components/cheader/cheader.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { TransitionComponent } from './components/transition/transition.componen
     TodolistComponent,
     DomleftbarComponent,
     ViewchildComponent,
-    TransitionComponent
+    TransitionComponent,
+    FhomeComponent,
+    CheaderComponent
   ],
   imports: [
     BrowserModule,
