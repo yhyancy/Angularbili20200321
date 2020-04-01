@@ -13,13 +13,15 @@ import { TodolistComponent } from './todolist/todolist.component';
 
 //引用并配置服务
 import { StorageService } from './services/storage.service';
+import { RequestService } from './services/request.service'
 import { DomleftbarComponent } from './components/domleftbar/domleftbar.component';
 import { ViewchildComponent } from './components/viewchild/viewchild.component';
 import { TransitionComponent } from './components/transition/transition.component';
 import { FhomeComponent } from './components/fhome/fhome.component';
 import { CheaderComponent } from './components/cheader/cheader.component';
 import { CfooterComponent } from './components/cfooter/cfooter.component';
-import { FnewsComponent } from './components/fnews/fnews.component'
+import { FnewsComponent } from './components/fnews/fnews.component';
+import { HomerxjsComponent } from './components/homerxjs/homerxjs.component'
 
 @NgModule({
   declarations: [
@@ -36,13 +38,14 @@ import { FnewsComponent } from './components/fnews/fnews.component'
     FhomeComponent,
     CheaderComponent,
     CfooterComponent,
-    FnewsComponent
+    FnewsComponent,
+    HomerxjsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [StorageService],
+  providers: [StorageService, RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
