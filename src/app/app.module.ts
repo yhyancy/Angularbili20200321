@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+//引用axios
+import { HttpClientModule } from '@angular/common/http';
+//引入jsonp 解决跨域问题
+import { HttpClientJsonpModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
@@ -9,7 +13,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './form/form.component';
 import { SearchComponent } from './components/search/search.component';
 import { TodolistComponent } from './todolist/todolist.component';
-
 
 //引用并配置服务
 import { StorageService } from './services/storage.service';
@@ -21,7 +24,9 @@ import { FhomeComponent } from './components/fhome/fhome.component';
 import { CheaderComponent } from './components/cheader/cheader.component';
 import { CfooterComponent } from './components/cfooter/cfooter.component';
 import { FnewsComponent } from './components/fnews/fnews.component';
-import { HomerxjsComponent } from './components/homerxjs/homerxjs.component'
+import { HomerxjsComponent } from './components/homerxjs/homerxjs.component';
+import { NewsAxiosComponent } from './components/news-axios/news-axios.component'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -39,11 +44,14 @@ import { HomerxjsComponent } from './components/homerxjs/homerxjs.component'
     CheaderComponent,
     CfooterComponent,
     FnewsComponent,
-    HomerxjsComponent
+    HomerxjsComponent,
+    NewsAxiosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [StorageService, RequestService],
   bootstrap: [AppComponent]

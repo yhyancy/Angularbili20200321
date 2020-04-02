@@ -1,0 +1,12 @@
+<p>news-axios works!</p>
+<button (click)="getData()">get请求数据</button>
+<br>
+<br>
+ <ul>
+     <li *ngFor="let item of list">{{ item.title }}</li>
+ </ul>
+<br>
+
+<button (click)="postData()">post请求数据</button>
+<br>
+<button (click)="getJsonpData()">jsonp允许跨域</button>
