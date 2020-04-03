@@ -27,6 +27,7 @@ import { FnewsComponent } from './components/fnews/fnews.component';
 import { HomerxjsComponent } from './components/homerxjs/homerxjs.component';
 import { NewsAxiosComponent } from './components/news-axios/news-axios.component'
 import { from } from 'rxjs';
+import { HttpServiceService } from './services/http-service.service'
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { from } from 'rxjs';
     HttpClientModule,
     HttpClientJsonpModule
   ],
-  providers: [StorageService, RequestService],
+  providers: [StorageService, RequestService, HttpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

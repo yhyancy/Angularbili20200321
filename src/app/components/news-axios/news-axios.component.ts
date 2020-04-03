@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule, HttpClient,HttpHeaders } from '@angular/common/http';
-
+//引入服务里面的 axios获取数据
+import { HttpServiceService } from '../../services/http-service.service'
 @Component({
   selector: 'app-news-axios',
   templateUrl: './news-axios.component.html',
@@ -8,7 +9,7 @@ import { HttpClientModule, HttpClient,HttpHeaders } from '@angular/common/http';
 })
 export class NewsAxiosComponent implements OnInit {
   public  list:any[]=[];
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, public httpService: HttpServiceService) { }
 
   ngOnInit() {
   }
@@ -34,6 +35,12 @@ export class NewsAxiosComponent implements OnInit {
     var api = 'http://127.0.01:3000/dologin'
     this.http.jsonp(api,'callback').subscribe((response)=>{
       console.log(response)
+    })
+  }
+  getAxiosData(){
+    var api = 'http://127.0.01:3000/dologin'
+    this.httpService.axiosGet(api).then((data)=>{
+        console.log(data)
     })
   }
 }
